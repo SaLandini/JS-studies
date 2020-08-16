@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais</title>
+</head>
+<body>
+    <script>
+        function retSexoBio(sexiBio){
+            if (sexiBio === 'M'){
+                return 'Masculino';
+            } else if (sexiBio === 'F'){
+                return 'Feminino'
+            } else {
+                return 'Não é nem um, nem outro'
+            }
+        }
+
+        var retorno = retSexoBio('M');
+        console.log(retorno)
+        // OR
+        function retSexoBio(sexiBio){
+            switch (sexiBio){
+                case 'M':
+                    return 'Masculino'
+                case 'F':
+                    return 'Feminino'
+                default:
+                    return 'Não é nem um, nem outro'
+            }
+        }
+
+        var retorno = retSexoBio('A');
+        console.log(retorno)
+        
+    </script>
+</body>
+</html>

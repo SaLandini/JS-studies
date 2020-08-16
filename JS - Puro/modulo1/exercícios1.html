@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script>
+        
+        var endereco = {
+            rua: "Rua dos pinheiros",
+            numero: 1293,
+            bairro: "Centro",
+            cidade: "São Paulo",
+            uf: "SP"
+        };
+
+        function enderecoCompleto(){
+            console.log('O usuário mora em', endereco.cidade,
+            '/', endereco.uf, 'no bairro', endereco.bairro,
+            ', na rua', endereco.rua ,'com', endereco.numero)
+        }
+        
+        enderecoCompleto()
+    
+    </script>
+    <script>
+        
+        function pares(x,y){
+            for (var i = x; i <= y; i++){
+                if (i%2 == 0){
+                    console.log('O número',i,'É par')
+                } else {
+                  console.log('O número',i,'Não é par')
+                }
+            }
+        }
+        pares(32, 321)
+    
+    </script>
+    <script>
+        function temHabilidade(skills) {
+            if (skills.indexOf('Javascript') === 0 || 1 || 2){
+                console.log(true)
+            } else {
+                console.log(false)
+            }
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        temHabilidade(skills);
+    </script>
+    <script>
+        function experiencia(anos) {
+            switch (anos){
+                case(0 || 1):
+                    return 'Iniciante'
+                case(2 || 3):
+                    return 'Intermediário'
+                case(4 || 5):
+                    return 'Avançado'
+                case(6 || 7):
+                    return 'Jedi Master'
+                default:
+                    return 'Jedi Master'
+            }
+        }
+
+        var anosEstudo = 4;
+        console.log(experiencia(anosEstudo));
+    </script>
+    <script>
+        function retExperiencia(usuario){
+            for (let i of usuario){
+                for (let j of i.habilidades){
+                    console.log('O',i.nome, 'possui as hablidades:',i.habilidades.join(',') )
+                }
+            }
+        }
+
+        var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+        
+        retExperiencia(usuarios)
+    </script>
+</body>
+</html>
